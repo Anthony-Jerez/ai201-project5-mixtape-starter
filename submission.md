@@ -7,6 +7,9 @@
 - Reproduction before fixing: for each bug, I had it actually run some of the existing tests or write small scripts to confirm the bug before touching any code
 - Course correction on Issue 3: the working hypothesis, matching the assignment's own hint, was that `search_songs` produced duplicates because it was missing `.distinct()` on a join. Running the existing test suite showed all tests passing, which contradicted that hypothesis. Instead of accepting that first explanation, I had it dig further: comparing raw SQL row counts against the ORM's returned row counts, testing multiple multi tag songs matching at once, clearing the session identity map, and running the same query against the real seeded database. That confirmed SQLAlchemy's legacy `Query` API auto deduplicates entity results by primary key, so the hypothesized bug does not actually reproduce in this codebase. That finding is what led to swapping Issue 3 for Issue 1.
 
+## Screenshot of git log commits
+<img width="760" height="105" alt="Screenshot 2026-07-06 at 3 01 26 AM" src="https://github.com/user-attachments/assets/bc11997c-aeb7-4485-8b97-920ba285aa0e" />
+
 ## Codebase Map
 
 ### Main Files and Roles

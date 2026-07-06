@@ -115,3 +115,8 @@ fix: correct Sunday boundary condition in streak reset logic
 ```
 
 See the project brief for full submission requirements.
+
+---
+
+## Screenshot of git log commits
+<img width="760" height="105" alt="Screenshot 2026-07-06 at 3 01 26 AM" src="https://github.com/user-attachments/assets/bc11997c-aeb7-4485-8b97-920ba285aa0e" />
